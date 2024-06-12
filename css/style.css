@@ -192,7 +192,7 @@ nav {
 }
 /* *****************about section************** */
 #about_sec{
-    background-color: #ce0adf;
+    /* background-color: #ce0adf; */
     height: 100vh;
 }
 #about_sec .container{
@@ -209,7 +209,7 @@ nav {
 }
 .abt_col_1{
     flex-basis: 49%;
-    background-color: #dd95e3;
+    /* background-color: #dd95e3; */
     padding: 6% 1%;
 }
 
@@ -235,7 +235,7 @@ nav {
 } */
 .abt_col_2{
     flex-basis: 50%;
-    background-color: #c414d4;
+    /* background-color: #c414d4; */
     padding: 6% 1%;
     /* padding: 8% 8%; */
 }

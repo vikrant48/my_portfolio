@@ -4,7 +4,7 @@
 @media (max-width: 768px) {
     /* **************head******** */
     header{
-        height: 75vh;
+        height: 80vh;
     }
     nav{
         height: 45px;
@@ -143,11 +143,21 @@
     }
     #sn{
         /* text-align: right; */
-        padding-left: 60px;
+        padding-left: 68px;
     }
     #sl{
-        padding-left: 30px;
+        padding-left: 42px;
     }
+    #sd{
+        padding-left: 12px; 
+    }
+    #sa{
+        padding-left: 10px;
+    }
+    #si{
+        padding-left: 11px;
+    }
+   
 
 
     /* ********resume********** */
@@ -184,13 +194,13 @@
     }
     /* ************messege********* */
     #messege_sec{
-        height: 90vh;
+        height: 82vh;
     }
     #messege_sec .container{
         padding: 0 5px;
     }
     h4#ms_center{
-        padding-left: 33px;
+        padding-left: 45px;
     }
     form{
         margin: 2px 0px;
@@ -231,6 +241,14 @@
 }
 
 @media (max-width: 480px) {
+    .home-col-1,
+    .abt_col_1,
+    .abt_col_2,
+    .home_col_2 {
+        flex-basis: 100%;
+        padding: 8%;
+        text-align: center;
+    }
     #home_sec .container {
         padding-left: 10px;
         padding-right: 10px;
@@ -242,11 +260,11 @@
 
     .abt_col_1,
     .abt_col_2 {
-        padding: 10% 5%;
+        padding: 10% 1%;
     }
 
     form {
-        margin: 2px 3px;
-        padding: 0 3px;
+        margin: 2px 8px;
+        padding: 0 8px;
     }
 }
