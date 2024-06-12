@@ -227,7 +227,7 @@
     }
 }
 
-/* @media (max-width: 480px) {
+@media (max-width: 480px) {
     .home-col-1,
     .abt_col_1,
     .abt_col_2,
@@ -254,4 +254,4 @@
         margin: 2px 3px;
         padding: 0 3px;
     }
-} */
+}
