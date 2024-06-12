@@ -70,9 +70,8 @@
     }
     /* ***************home************* */
     #home_sec .container{
-        padding-top: 80px ;
-        padding-left: 5px;
-        padding-right: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
         /* padding-bottom: 20px; */
     }
     
@@ -114,8 +113,8 @@
     }
     #about_sec .container{
         padding-top: 80px ;
-        padding-left: 5px;
-        padding-right: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
         /* padding-bottom: 0px; */
         
     }
@@ -153,8 +152,8 @@
         height: 195vh;
     }
     #resume_sec .container{
-        padding-left: 5px;
-        padding-right: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     h2.resume-heading{
         padding-left: 60px;
@@ -233,7 +232,6 @@
     .abt_col_2,
     .home_col_2 {
         flex-basis: 100%;
-        padding: 8%;
         text-align: center;
     }
     #home_sec .container {
