@@ -19,7 +19,7 @@
         <nav>
             <div class="container">
                 <div id="navleft">
-                    <img src="img/logoimg.png" class="logo">
+                    <img src="img/logoimg.png" class="logo" id="profilePic"> 
                     <h2>Vikrant Chauhan</h2>
                 </div>
                 <div id="navright">
@@ -58,13 +58,18 @@
                                     <li><a href="https://github.com/vikrant48"> Visit Github</a></li>
                                 </ul>
                             </button>
+                            <div id ="imgpreview">
+                                <div id="imgModal" class="modal">
+                                    <span class="close">&times;</span>
+                                    <img class="modal-content" id="modalImg">
+                                </div>
+                            </div> 
                         </div>
 
 
                     </div>
                     <div class="home_col_2">
-                        <img src="img/logoimg.png" alt="">
-
+                        <img src="img/logoimg.png" alt="">  
                     </div>
                 </div>
                 
@@ -247,14 +252,14 @@
                     </form>
                 </div>
             </div>
-        </section>
+        </section>    
     </main>
     <footer id="footer_sec">
         <div class="container">
                 <div class="row" id="fr">
                     <div class="foot2">
                         <div class="f_title">
-                            <h3>Contect me </h3>
+                            <h3>Contact me </h3>
                         </div>
                         <ul>
                             <li><i class="fa-solid fa-envelope"></i><a href="mailto:vikrantchauhan9794.com">E-mail</a></li>
@@ -262,7 +267,7 @@
                                     https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2084391.3903172577!2d83.41758445403067!3d26.131241245555564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1716546144585!5m2!1sen!2sin"
                                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                                     referrerpolicy="no-referrer-when-downgrade"></iframe>Address</a></li>
-                            <li><i class="fa-solid fa-phone"></i><a href="tel://6386696764">Contect Number </a></li>
+                            <li><i class="fa-solid fa-phone"></i><a href="tel://6386696764">Contact Number </a></li>
                         </ul>
         
                     </div>
@@ -290,6 +295,26 @@
 
     </footer>
 </body>
+<script>
+    var modal = document.getElementById("imgModal");
+    var img = document.getElementById("profilePic");
+    var modalImg = document.getElementById("modalImg");
+
+    img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = this.src;
+    }
+    var span = document.getElementsByClassName("close")[0];
+
+    span.onclick = function() { 
+        modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
 <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzTtn3GpBd5tUvAm0Te8xxpn4rIu1G4IiXc-fq-51pkl0LnqrwhFlgQh837Bw59jGFM/exec'
     const form = document.forms['submit-to-google-sheet']

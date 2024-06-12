@@ -450,3 +450,7 @@ footer .footer_rights {
     
 }  
 /* **************************************** */
+#imgpreview{
+    height: 0vh;
+    display: block;
+}
