@@ -21,10 +21,10 @@
     #navright ul {
         flex-direction: column;
         position: fixed;
-        top: 60px;
+        top: 50px;
         left: -100%;
-        width: 100%;
-        height: calc(100vh - 60px);
+        width: 25%;
+        height: calc(100vh - 50px);
         background-color: rgba(168, 11, 231, 0.9);
         transition: left 0.3s ease;
     }
@@ -36,6 +36,10 @@
     #navright ul li {
         margin: 20px 0;
         text-align: center;
+    }
+    #navright ul li a{
+        /* color: blue; */
+        margin-right: 200px;
     }
 
     .hamburger {
@@ -227,13 +231,6 @@
 }
 
 @media (max-width: 480px) {
-    .home-col-1,
-    .abt_col_1,
-    .abt_col_2,
-    .home_col_2 {
-        flex-basis: 100%;
-        text-align: center;
-    }
     #home_sec .container {
         padding-left: 10px;
         padding-right: 10px;
