@@ -21,11 +21,11 @@
     #navright ul {
         flex-direction: column;
         position: fixed;
-        top: 50px;
+        top: 27px;
         left: -100%;
         width: 25%;
         height: calc(100vh - 50px);
-        background-color: rgba(79, 34, 238, 0.9);
+        background-color: rgba(208, 9, 234, 0.646);
         transition: left 0.3s ease;
     }
 
@@ -272,8 +272,8 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    color: #aaa;
-    font-size: 28px;
+    color: #cfcece;
+    font-size: 30px;
     font-weight: bold;
     cursor: pointer;
     }
@@ -306,11 +306,12 @@
 
     .abt_col_1,
     .abt_col_2 {
-        padding: 10% 1%;
+        padding: 8% 1%;
     }
 
     form {
-        margin: 2px 8px;
-        padding: 0 8px;
+        margin: 2px 3px;
+        padding: 0 3px;
     }
+    
 }
