@@ -238,9 +238,9 @@
         font-size: 1.3rem;  
     }
     /*************imgviewinlarge*************/
-    .modal {
+    /* .modal {
         display: block; 
-    }
+    } */
 }
 @media (max-width: 480px) {
     .home-col-1,
