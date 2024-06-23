@@ -19,8 +19,13 @@
         <nav>
             <div class="container">
                 <div id="navleft">
-                    <img src="img/logoimg.png" class="logo" id="profilePic"> 
+                    <img src="img/logoimg.png" class="vimg" id="profilePic"> 
                     <h2>Vikrant Chauhan</h2>
+                </div>
+                <!-- Modal for larger image -->
+                <div id="imgModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="modalImg">
                 </div>
                 <div id="navright">
                     <ul>
@@ -38,7 +43,7 @@
                 </div>
             </div>
         </nav>
-        <section id="home_sec">
+        <section id="home_sec">   
             <div class="container">
                 <div class="row">
                     <div class="home_col_1">
@@ -58,18 +63,12 @@
                                     <li><a href="https://github.com/vikrant48"> Visit Github</a></li>
                                 </ul>
                             </button>
-                            <div id ="imgpreview">
-                                <div id="imgModal" class="modal">
-                                    <span class="close">&times;</span>
-                                    <img class="modal-content" id="modalImg">
-                                </div>
-                            </div> 
                         </div>
 
 
                     </div>
                     <div class="home_col_2">
-                        <img src="img/logoimg.png" alt="">  
+                        <img src="img/me3.png" alt="">  
                     </div>
                 </div>
                 
@@ -284,25 +283,24 @@
                         </ul>
                     </div>
                 </div>
-            
+
                 <div class="footer_rights">
                     Copyright &#169; 2024 All rights reserved | This portfolio made by Vikrant
-                </div>
+                </div>         
         </div>
 
     </footer>
 </body>
 <script>
-    var modal = document.getElementById("imgModal");
-    var img = document.getElementById("profilePic");
-    var modalImg = document.getElementById("modalImg");
+    let img = document.getElementById("profilePic");
+    let modal = document.getElementById("imgModal");
+    let modalImg = document.getElementById("modalImg");
+    let span = document.getElementsByClassName('close')[0]
 
-    img.onclick = function(){
+    img.onclick = function() {
         modal.style.display = "block";
         modalImg.src = this.src;
     }
-    var span = document.getElementsByClassName("close")[0];
-
     span.onclick = function() { 
         modal.style.display = "none";
     }
@@ -310,7 +308,7 @@
         if (event.target == modal) {
             modal.style.display = "none";
         }
-    }
+    }  
 </script>
 <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzTtn3GpBd5tUvAm0Te8xxpn4rIu1G4IiXc-fq-51pkl0LnqrwhFlgQh837Bw59jGFM/exec'

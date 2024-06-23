@@ -237,55 +237,11 @@
         text-align: center;
         font-size: 1.3rem;  
     }
-    
-    /* Modal Styles */
-    #imgpreview{
-        display: block;
-    }
+    /*************imgviewinlarge*************/
     .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 15%;
-    top: 0;
-    width: 70%;
-    height: 41%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    .modal-content {
-    margin: 5% auto;
-    padding: 5px;
-    border: 1px solid #888;
-    width: 90%;
-    max-width: 500px;
-    position: relative;
-    }
-
-    .modal-content img {
-    width: 80%;
-    height: auto;
-    }
-
-    .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: #cfcece;
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
-    }
-
-    .close:hover,
-    .close:focus {
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
+        display: block; 
     }
 }
-
 @media (max-width: 480px) {
     .home-col-1,
     .abt_col_1,

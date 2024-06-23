@@ -450,7 +450,47 @@ footer .footer_rights {
     
 }  
 /* **************************************** */
-#imgpreview{
-    height: 0vh;
+/* Basic styles for the modal */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 15%;
+    top: 0;
+    width: 65%; 
+    height: 41%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.8); 
+}
+
+.modal-content {
+    margin: 5% auto;
+    padding: 3px;
+    border: 1px solid #888;
     display: block;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+}
+.modal-content img {
+    width: 5%;
+    height: auto;
+    }
+
+.close {
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
