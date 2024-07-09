@@ -122,7 +122,7 @@
         
                         <span>Javascript</span>
                         <div class="progress">
-                            <div class="progress-bar" style="width: 70%" aria-valuenow="80" aria-valuemin="0"
+                            <div class="progress-bar" style="width: 80%" aria-valuenow="85" aria-valuemin="0"
                                 aria-valuemax="100"></div>
                         </div>
                     </div>
@@ -164,10 +164,6 @@
                                 <span>Other Skills:</span>
                                 <span class="sr">&nbsp;Drawing, Creativity, Adaptability,Technical proficiency,Communication skills&amp;Time management </span>
                             </li>
-                            <!-- <li class="d-flex">
-                                <span></span>
-                                <span class="sr"> Communication skills, Time management &amp; Adaptability </span>
-                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -337,6 +333,18 @@
         hamburger.classList.toggle('active');
         navLinks.classList.toggle('show');
     });   
+</script>
+<script>
+    const webElement = document.getElementById('web');
+
+function resetAnimation() {
+    webElement.style.animation = 'none';
+    webElement.offsetHeight; // Trigger reflow
+    webElement.style.animation = 'typing 3s steps(20, end), blink-caret .75s step-end infinite';
+}
+
+// Reset animation every 3.75 seconds 
+setInterval(resetAnimation, 3750);
 </script>
 
 </html>
