@@ -24,9 +24,10 @@
         top: 27px;
         left: -100%;
         width: 25%;
-        height: calc(100vh - 50px);
+        height: calc(100vh - 44px);
         background-color: rgba(208, 9, 234, 0.646);
         transition: left 0.3s ease;
+        padding-left: 0;
     }
 
     #navright ul.show {
@@ -39,7 +40,7 @@
     }
     #navright ul li a{
         /* color: blue; */
-        margin-right: 200px;
+        margin-right: 0;
     }
 
     .hamburger {
@@ -268,6 +269,12 @@
     form {
         margin: 2px 3px;
         padding: 0 3px;
+    }
+    #navright ul {
+        width: 50%; /* Full width for mobile */
+    }
+    #navright ul li{
+        margin: 10px 0;
     }
     
 }
