@@ -135,6 +135,7 @@ nav {
 }
 #web{
     font-size: 35px;
+    font-weight: 600;
     letter-spacing: -1px;
     color: #ce0adf;
     display: inline-block;
