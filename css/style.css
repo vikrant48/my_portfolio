@@ -137,7 +137,21 @@ nav {
     font-size: 35px;
     letter-spacing: -1px;
     color: #ce0adf;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    animation: typing 3s steps(20, end), blink-caret .75s step-end infinite;
 
+}
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #ce0adf; }
 }
 #homebtn{
     margin: 16px 0;
