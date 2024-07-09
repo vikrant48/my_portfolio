@@ -58,6 +58,7 @@ nav {
 #navleft h2{
     padding: 0 20px;
     font-weight: 900;
+    font-size: 18px;
 }
 
 #navright{
@@ -69,12 +70,12 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left:170px;
+    padding-left:100px;
    
 }
 
 #navright ul li {
-    margin: 0 25px;
+    margin: 0 15px;
     list-style: none;
 }
 
