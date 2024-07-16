@@ -23,7 +23,7 @@
         position: fixed;
         top: 27px;
         left: -100%;
-        width: 25%;
+        width: 50%;
         height: calc(100vh - 44px);
         background-color: rgba(208, 9, 234, 0.646);
         transition: left 0.3s ease;
@@ -123,7 +123,7 @@
         /* padding-bottom: 0px; */
         
     }
-    .abt_col_1 .abt_col_2 {
+    .abt_col_1, .abt_col_2 {
         flex-basis: 100%;
         padding: 10px 0;
     }
@@ -224,7 +224,7 @@
         display: flex;
         font-size: 10px;
     }
-    .foot2 .foot3{
+    .foot2, .foot3{
         justify-content: center;
         text-align: left;
 
@@ -244,7 +244,7 @@
     } */
 }
 @media (max-width: 480px) {
-    .home-col-1,
+    .home_col_1,
     .abt_col_1,
     .abt_col_2,
     .home_col_2 {
