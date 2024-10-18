@@ -293,7 +293,7 @@ li {
 /* ****************************resume ********************* */
 #resume_sec{
     /* background-color: #ce0adf; */
-    height: 116vh;
+    height: 196vh;
 }
 #resume_sec .container{
     display: block;
@@ -331,19 +331,27 @@ h2.resume-heading{
     padding: 12px;
     border-radius: 5px;
 }
-.resume-wrap .date {
+.resume-wrap .subhead {
     font-weight: 900;
     font-size: 26px;
     color: #7f1289;
 }
-.resume-wrap .course {
+.resume-wrap .descrip {
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: lowercase;
 }
-.resume-wrap .cgpa{
+.resume-wrap .subdes{
     margin-top: 5px;
+}
+.project-link {
+    display: inline-block;
+    /* padding: 10px 20px; */
+    /* background-color: #4CAF50; Green */
+    color: rgb(245, 231, 111);
+    /* text-align: center; */
+    text-decoration: none;
 }
 
 /* ******************messege****************** */
