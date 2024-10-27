@@ -224,7 +224,7 @@
                     </div>
 
                 </div>
-                                <div class="row">
+                <div class="row">
                     <div class="_tital">
                         <h3>Projects</h3>
                     </div>
@@ -258,6 +258,60 @@
                             <p>Utilized Axios for fetching GPS data from a provided URL and implemented CSV parsing to process the data.</p>
                             <p>Designed a stoppage detection algorithm that calculates stoppage points based on speed and time thresholds, visualizing these on a Leaflet map.</p>
                             <a class="project-link" href="https://github.com/vikrant48/Vehical__stoppage_identification">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="_tital">
+                        <h3>Coding Profile</h3>
+                    </div>
+                    <div class="underline"></div>
+                </div>
+                <div class="row">
+                    <div class="progress-container">
+                        <a href="https://leetcode.com/u/vikrantlee">LeetCode</a>
+                        <div class="circular-progress">
+                          <h1 id="totalSolved">0</h1>
+                        </div>
+                        <p><span id="solved"><i class="fa-solid fa-check" style="color: #63E6BE;"></i>Solved</span></p>
+                        <!-- <p id="attempting">0 Attempting</p> -->
+                        <p id="totalques">Out of 0</p>
+                    
+                        <div class="details">
+                          <div class="easy">
+                            <p>Easy</p>
+                            <p id="easySolved">0/0</p>
+                          </div>
+                          <div class="medium">
+                            <p>Medium</p>
+                            <p id="mediumSolved">0/0</p>
+                          </div>
+                          <div class="hard">
+                            <p>Hard</p>
+                            <p id="hardSolved">0/0</p>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <a href="https://github.com/vikrant48">GitHub</a>
+                        <div class="circular-progress">
+                            <img id="avatar" src="" alt="Avtar" style="border-radius: 50%;">
+                        </div>
+                        <div id="bio">bio</div>
+                        
+                        <div class="details">
+                            <div class="easy">
+                              <p>Public_repos</p>
+                              <p id="public_repos">0</p>
+                            </div>
+                            <div class="medium">
+                              <p>Followers</p>
+                              <p id="followers">0</p>
+                            </div>
+                            <div class="hard">
+                              <p>Created_On</p>
+                              <p id="created_on">0</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -382,6 +436,49 @@ function resetAnimation() {
 
 // Reset animation every 3.75 seconds 
 setInterval(resetAnimation, 3750);
+</script>
+<script>
+    async function fetchData() {
+        const resp = await fetch('https://leetcode-api-faisalshohag.vercel.app/vikrantlee')
+        const data = await resp.json()
+
+        console.log(data)
+
+        // Populate data
+        document.getElementById('totalSolved').textContent = data.totalSolved;
+        document.getElementById('totalques').textContent = `Out of ${data.totalQuestions}`;
+        document.getElementById('solved').innerHTML = `<i class="fa-solid fa-check" style="color: #63E6BE; margin-right: 5px;"></i> Solved`;
+        // document.getElementById('attempting').textContent = `${data.totalSubmissions[0].submissions - data.totalSolved} Attempting`;
+
+        // Populate Easy, Medium, Hard stats
+        document.getElementById('easySolved').textContent = `${data.easySolved}/${data.totalEasy}`;
+        document.getElementById('mediumSolved').textContent = `${data.mediumSolved}/${data.totalMedium}`;
+        document.getElementById('hardSolved').textContent = `${data.hardSolved}/${data.totalHard}`;
+        
+       
+    }
+    fetchData()
+</script>
+<script>
+    async function fetchgitdata() {
+    try {
+        const resp = await fetch('https://api.github.com/users/vikrant48')
+        if (!resp.ok) throw new Error("Network response was not ok");
+        
+        const data = await resp.json()
+        console.log(data)
+
+        document.getElementById('avatar').src = data.avatar_url
+        document.getElementById('bio').textContent = data.bio
+        document.getElementById('public_repos').textContent = data.public_repos
+        document.getElementById('followers').textContent = data.followers
+        document.getElementById('created_on').textContent = new Date(data.created_at).toLocaleDateString()
+    } catch (error) {
+        console.error("Failed to fetch GitHub data:", error)
+    }
+}
+fetchgitdata()
+
 </script>
 
 </html>

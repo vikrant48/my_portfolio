@@ -293,7 +293,7 @@ li {
 /* ****************************resume ********************* */
 #resume_sec{
     /* background-color: #ce0adf; */
-    height: 196vh;
+    height: 245vh;
 }
 #resume_sec .container{
     display: block;
@@ -518,3 +518,79 @@ footer .footer_rights {
     text-decoration: none;
     cursor: pointer;
 }
+/************************coding profile**********************/
+
+.progress-container {
+    background-color: #19175b;
+    border-radius: 12px;
+    padding: 20px;
+    width: 450px;
+    text-align: center;
+    margin: 5px 15px;
+}
+.progress-container a {
+    display: inline-block;
+    font-size: 1.8em;
+    color: #fcfcfc; 
+    text-decoration: none;
+    margin-bottom: 2px;
+    font-weight: bold;
+    transition: color 0.3s ease; 
+}
+
+.progress-container a:hover {
+    color: #960de6;
+    text-decoration: underline; 
+}
+
+.progress-container h1 {
+    font-size: 2.5em;
+}
+
+.progress-container p {
+    margin-top: 8px;
+}
+
+.circular-progress {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #7f1289;
+    /* background: conic-gradient(
+        #1abc9c 0% 30%,
+        #f39c12 30% 65%,
+        #e74c3c 65% 100%
+    ); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.details div {
+    width: 30%;
+    padding: 10px;
+    background-color: #444;
+    border-radius: 6px;
+}
+
+.details .easy {
+    color: #1abc9c;
+}
+
+.details .medium {
+    color: #f39c12;
+}
+
+.details .hard {
+    color: #e74c3c;
+}
+
