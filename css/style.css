@@ -212,7 +212,7 @@ nav {
     height: 100vh;
 }
 #about_sec .container{
-    padding-top: 80px ;
+    padding-top: 75px ;
     padding-left: 50px;
     padding-right: 50px;
     /* padding-bottom: 0px; */
@@ -234,21 +234,66 @@ nav {
     height: 0.7rem;
     padding: 20px 0;
 }
+ /*****************************skill update ******************************/
+ .hover-container {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #221f7b;
+    border-radius: 8px;
+    text-align: center;
+    width: 200px;
+}
+
+.hover-container span {
+    font-size: 1.1em;
+    color: #fafafa;
+}
+
+.skill-card {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #6071f1;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    width: 220px;
+    margin-top: 10px;
+    z-index: 1;
+}
+
+.hover-container:hover .skill-card {
+    opacity: 1;
+    visibility: visible;
+}
+
+.skill-card span {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #000000;
+}
 .progress {
     height: 12px;
     box-shadow:none;
     background: #1a1a1a;
+    border-radius: 8px;
     overflow: visible;
     font-size: 0.75rem;
+    margin: 5px 0 10px;
 }
 .progress-bar {
     height: 12px;
     background-color:  #7f1289;
+    border-radius: 8px;
+    transition: width 0.3s ease;
 }
-/* div {
-    display: block;
-    unicode-bidi: isolate;
-} */
 .abt_col_2{
     flex-basis: 50%;
     /* background-color: #c414d4; */

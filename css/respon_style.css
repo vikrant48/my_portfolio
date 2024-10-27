@@ -114,7 +114,7 @@
     /* *********about********* */
     #about_sec{
         /* background-color: #ce0adf; */
-        height: 164vh;
+        height: 189vh;
     }
     #about_sec .container{
         padding-top: 80px ;
@@ -138,7 +138,7 @@
         margin-top: 1rem !important;
     }
     ul.about-info {
-        padding-left: 6px;
+        padding-left: 1px;
         font-size: 14px;
         text-align: right;
     }
