@@ -34,7 +34,7 @@ nav {
     background-color: rgb(3, 2, 8);
 }
 .container{
-    margin: 3px 12%;
+    margin: 3px 10%;
     /* background-color: rgb(154, 119, 186); */
     display: flex;
 }
@@ -234,7 +234,7 @@ nav {
     height: 0.7rem;
     padding: 20px 0;
 }
- /*****************************skill update ******************************/
+
  .hover-container {
     position: relative;
     display: inline-block;
@@ -242,7 +242,7 @@ nav {
     cursor: pointer;
     background-color: #221f7b;
     border-radius: 8px;
-    text-align: center;
+    text-align: left;
     width: 200px;
 }
 
@@ -250,6 +250,21 @@ nav {
     font-size: 1.1em;
     color: #fafafa;
 }
+
+.skill_info {
+    display: block; 
+    line-height: 1.5;
+    color: #333;
+    padding-left: 10px;
+    border-left: 4px solid #007bff; 
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  */
+}
+
+.skill_info strong {
+    font-weight: bold;
+    color: #4a80d0; 
+}
+
 
 .skill-card {
     position: absolute; 
@@ -300,45 +315,44 @@ nav {
     padding: 6% 1%;
     /* padding: 8% 8%; */
 }
- ul.about-info {
-    display: inline-block;
-    padding-top: 2px;
-    margin: 0 ;
-    padding-left: 60px;
-    /* width: 100%; */
-}
 
-.mt-4 {
-    margin-top: 1.5rem !important;
-}
 
-ul {
-    text-decoration: none;
-    list-style-type: none;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 28px;
-    unicode-bidi: isolate;
-}
-ul.about-info li {
+.about-info {
     list-style: none;
-    margin: 9px 0;
-    /* margin-bottom: 25px; */
+    padding: 0;
+    margin: 0;
 }
-.d-flex {
-    display: flex !important;
+
+.about-info li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    /* border-bottom: 1px solid #eaeaea;  */
 }
-li {
-    display: list-item;
-    unicode-bidi: isolate;
-} 
+
+.about-info h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    flex-basis: 30%; 
+}
+
+.about-info .sr {
+    margin: 0;
+    font-size: 16px;
+    color: #bfbebe;
+    text-align: right;
+    flex-basis: 70%;
+    word-wrap: break-word; 
+}
+
 
 /* ****************************resume ********************* */
 #resume_sec{
     /* background-color: #ce0adf; */
-    height: 245vh;
+    height: 280vh;
 }
 #resume_sec .container{
     display: block;
@@ -385,7 +399,7 @@ h2.resume-heading{
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 2px;
-    text-transform: lowercase;
+    /* text-transform: lowercase; */
 }
 .resume-wrap .subdes{
     margin-top: 5px;
@@ -417,8 +431,7 @@ h4#ms_center{
 form{
     display: block;
     width: 100%;
-    margin: 2px 30px;
-    padding: 0 30px;
+    padding: 0 10px;
 }
 form input,form textarea{
     width: 100%;
