@@ -73,13 +73,12 @@
         top: -8px;
         position: relative;
     }
-    /* ***************home************* */
     .container{
         padding: 0, 2px;
         margin: 3px 5%;
     }
-    
-    .home_col_1{
+    /* ***************home************* */
+    /* .home_col_1{
         flex-basis: 100%;
         padding: 10px 0;
     }
@@ -87,11 +86,7 @@
         flex-basis: 0;
         display: none;
     }
-    /* .home_col_2 img {
-        display: none;
-    } */
     .text{
-        /* font-size: 500px; */
         margin: 50px 0;
     }
     #hi{
@@ -108,7 +103,56 @@
     .btn{
         font-weight: 700;
         height: 7vh;
+    } */
 
+
+    @media screen and (max-width: 992px) {
+        #home_sec .container {
+            flex-direction: column;
+            padding: 150px 20px;
+        }
+    
+        .home_col_1 {
+            flex-basis: 100%;
+            padding: 20px 0;
+            text-align: center;
+        }
+    
+        #myname {
+            font-size: 48px;
+        }
+    
+        #web {
+            font-size: 26px;
+        }
+    
+        #homebtn {
+            justify-content: center;
+            gap: 10px;
+        }
+    
+        .home_col_2 {
+            display: none;
+        }
+    }
+    
+    @media screen and (max-width: 768px) {
+        #hi {
+            font-size: 22px;
+        }
+    
+        #myname {
+            font-size: 36px;
+        }
+    
+        #web {
+            font-size: 22px;
+        }
+    
+        .btn {
+            font-size: 12px;
+            padding: 8px 16px;
+        }
     }
     /* *********about********* */
     #about_sec{
@@ -154,13 +198,13 @@
     /* ********resume********** */
     #resume_sec{
         /* background-color: #ce0adf; */
-        height: 590vh;
+        height: 585vh;
     }
     #resume_sec .container{
         padding: 0 10px;
     }
     h2.resume-heading{
-        padding-left: 100px;
+        padding-left: 94px;
     }
     #rescontent{
         font-size: 14px;
