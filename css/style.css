@@ -665,7 +665,7 @@ nav {
 /* *****************about section************** */
 #about_sec{
     /* background-color: #ce0adf; */
-    height: 100vh;
+    height: 90vh;
 }
 #about_sec .container{
     padding-top: 75px ;
@@ -808,7 +808,7 @@ nav {
 /* ****************************resume ********************* */
 #resume_sec{
     /* background-color: #ce0adf; */
-    height: 280vh;
+    height: 290vh;
 }
 #resume_sec .container{
     display: block;
