@@ -157,7 +157,7 @@
     /* *********about********* */
     #about_sec{
         /* background-color: #ce0adf; */
-        height: 195vh;
+        height: 210vh;
     }
     #about_sec .container{
         padding-top: 80px ;
@@ -198,7 +198,7 @@
     /* ********resume********** */
     #resume_sec{
         /* background-color: #ce0adf; */
-        height: 585vh;
+        height: 630vh;
     }
     #resume_sec .container{
         padding: 0 10px;
