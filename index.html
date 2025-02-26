@@ -33,6 +33,7 @@
                 </div>
                 <div id="navright">
                     <ul>
+                        <img src="img/me3.png" alt="Menu Image" class="menu-img">
                         <li><a href="#home_sec" class="nav_link"><span>Home</span></a></li>
                         <li><a href="#about_sec" class="nav_link"><span>About</span></a></li>
                         <li><a href="#resume_sec" class="nav_link"><span>Resume</span></a></li>
@@ -606,7 +607,7 @@
                 })
                 if (response.ok) {
                     msg.innerHTML = "Your message was sent successfully"
-                    setTimeout(() => msg.innerHTML = "", 500)
+                    setTimeout(() => msg.innerHTML = "", 1500)
                     form.reset()
                 } else {
                     msg.innerHTML = "Error sending message"
