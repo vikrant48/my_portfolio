@@ -987,6 +987,18 @@
     <footer id="footer_sec" class="footer">
       <div class="container">
         <div class="row" id="fr">
+          <div class="foot1">
+            <div class="f_title">
+              <h3>Quick Links</h3>
+            </div>
+            <ul class="quick-links">
+              <li><a href="#home_sec">Home</a></li>
+              <li><a href="#about_sec">About</a></li>
+              <li><a href="#resume_sec">Resume</a></li>
+              <li><a href="#message_sec">Message</a></li>
+              <li><a href="#footer_sec">Contact</a></li>
+            </ul>
+          </div>
           <div class="foot2">
             <div class="f_title">
               <h3>Contact me</h3>
@@ -994,31 +1006,18 @@
             <ul class="contact-list">
               <li>
                 <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-                <a
-                  href="mailto:vikrantchauhan9794@gmail.com"
-                  aria-label="Send email to vikrantchauhan9794@gmail.com"
-                  >E-mail</a
-                >
+                <a href="mailto:vikrantchauhan9794@gmail.com">E-mail</a>
               </li>
               <li>
                 <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-                <a
-                  href="https://maps.app.goo.gl/pXa6z6tnraSWKVNK9"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="View location on Google Maps"
-                  >Varanasi, India</a
-                >
+                <a href="https://maps.app.goo.gl/pXa6z6tnraSWKVNK9" target="_blank">Varanasi, India</a>
               </li>
               <li>
                 <i class="fa-solid fa-phone" aria-hidden="true"></i>
-                <a href="tel:+916386696764" aria-label="Call 6386696764"
-                  >6386696764</a
-                >
+                <a href="tel:+916386696764">6386696764</a>
               </li>
             </ul>
           </div>
-
           <div class="foot3">
             <div class="f_title">
               <h3>Follow me</h3>
@@ -1026,56 +1025,36 @@
             <ul class="social-list">
               <li>
                 <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                <a
-                  href="https://www.linkedin.com/in/vikrant-chauhan-bb8669229?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Visit LinkedIn profile"
-                >
-                  LinkedIn
-                </a>
+                <a href="https://www.linkedin.com/in/vikrant-chauhan-bb8669229" target="_blank">LinkedIn</a>
               </li>
               <li>
                 <i class="fa-brands fa-discord" aria-hidden="true"></i>
-                <a
-                  href="https://discord.com/invite/DPv8dVvB"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Join Discord server"
-                >
-                  Discord
-                </a>
+                <a href="https://discord.com/invite/DPv8dVvB" target="_blank">Discord</a>
               </li>
               <li>
                 <i class="fa-brands fa-facebook" aria-hidden="true"></i>
-                <a
-                  href="https://www.facebook.com/vikrant.chauhan.90663894"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Visit Facebook profile"
-                >
-                  Facebook
-                </a>
+                <a href="https://www.facebook.com/vikrant.chauhan.90663894" target="_blank">Facebook</a>
               </li>
               <li>
                 <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                <a
-                  href="https://www.instagram.com/vi.krant4693/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Visit Instagram profile"
-                >
-                  Instagram
-                </a>
+                <a href="https://www.instagram.com/vi.krant4693/" target="_blank">Instagram</a>
               </li>
             </ul>
           </div>
+          <div class="foot4">
+            <div class="f_title">
+              <h3>Newsletter</h3>
+            </div>
+            <form class="newsletter-form" autocomplete="off">
+              <input type="email" placeholder="Your email address" required>
+              <button type="submit" class="btn btn-secondary">Subscribe</button>
+            </form>
+            <p class="footer-tagline">"Building the future, one line of code at a time."</p>
+          </div>
         </div>
-
         <div class="footer_rights">
           <p>
-            &copy; 2024 All rights reserved | This portfolio made by Vikrant
-            Chauhan
+            &copy; 2024 All rights reserved | This portfolio made by Vikrant Chauhan
           </p>
         </div>
       </div>
@@ -1458,8 +1437,13 @@
 
       // Add focus trap to modal
       const modal = document.getElementById("imgModal");
-      if (modal) {
-        modal.addEventListener("keydown", trapFocus);
+      const closeBtn = document.querySelector(".close");
+      if (modal && closeBtn) {
+        closeBtn.addEventListener("click", () => {
+          modal.style.display = "none";
+          modal.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "auto";
+        });
       }
     </script>
   </body>
