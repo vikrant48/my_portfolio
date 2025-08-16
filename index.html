@@ -1,625 +1,1410 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Vikrant Chauhan - Web Developer Portfolio. Full-stack developer specializing in React, Node.js, and modern web technologies."
+    />
+    <meta
+      name="keywords"
+      content="web developer, full-stack developer, React, Node.js, JavaScript, portfolio"
+    />
+    <meta name="author" content="Vikrant Chauhan" />
+    <meta
+      property="og:title"
+      content="Vikrant Chauhan - Web Developer Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Full-stack web developer with expertise in modern web technologies"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://your-portfolio-url.com" />
+    <meta property="og:image" content="img/me3.png" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="/img/briefcase-solid.svg" />
-    <title>Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="img/briefcase-solid.svg" />
+    <link rel="apple-touch-icon" href="img/logoimg.png" />
+    <title>Vikrant Chauhan - Web Developer Portfolio</title>
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/respon_style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a98bcf882b.js" crossorigin="anonymous"></script>
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/style.css" as="style" />
+    <link rel="preload" href="css/respon_style.css" as="style" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      as="style"
+    />
 
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/respon_style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
-</head>
+    <!-- Font Awesome with integrity -->
+    <script
+      src="https://kit.fontawesome.com/a98bcf882b.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
 
-<body>
+    <!-- Performance monitoring -->
+    <script>
+      // Performance monitoring
+      window.addEventListener("load", () => {
+        if ("performance" in window) {
+          const perfData = performance.getEntriesByType("navigation")[0];
+          console.log(
+            "Page load time:",
+            perfData.loadEventEnd - perfData.loadEventStart,
+            "ms"
+          );
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <header id="head">
-        <nav>
-            <div class="container">
-                <div id="navleft">
-                    <img src="img/logoimg.png" class="vimg" id="profilePic">
-                    <h2>Vikrant Chauhan</h2>
-                </div>
-                <!-- Modal for larger image -->
-                <div id="imgModal" class="modal">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="modalImg">
-                </div>
-                <div id="navright">
-                    <ul>
-                        <img src="img/me3.png" alt="Menu Image" class="menu-img">
-                        <li><a href="#home_sec" class="nav_link"><span>Home</span></a></li>
-                        <li><a href="#about_sec" class="nav_link"><span>About</span></a></li>
-                        <li><a href="#resume_sec" class="nav_link"><span>Resume</span></a></li>
-                        <li><a href="#messege_sec" class="nav_link"><span>Message me</span></a></li>
-                        <li><a href="#footer_sec" class="nav_link"><span>Contact me</span></a></li>
-                    </ul>
-                    <div class="hamburger">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <section id="home_sec">
-            <div class="container">
-                <div class="row">
-                    <div class="home_col_1">
-                        <div class="text ">
-                            <span id="hi">Hello Everybody! i'm</span>
-                            <h1 id="myname"><span>VIKRANT CHAUHAN</span></h1>
-                            <span id="web">WEB DEVELOPER</span>
-                        </div>
-                        <div id="homebtn">
-                            <button class="btn">
-                                <ul>
-                                    <li><a href="https://drive.google.com/file/d/1uO5jdb-ZGnCZ5ZcJ8fAUrKswoL1EIMfC/view?usp=sharing"
-                                            download target="_blank">Download Resume</a></li>
-                                </ul>
-                            </button>
-                            <button class="btn">
-                                <ul>
-                                    <li><a href="https://github.com/vikrant48" target="_blank"> Visit Github</a></li>
-                                </ul>
-                            </button>
-                        </div>
-
-
-                    </div>
-                    <div class="home_col_2">
-                        <img src="img/me3.png" alt="">
-                    </div>
-                </div>
-
-            </div>
-        </section>
-    </header>
-    <main>
-        <section id="about_sec">
-            <div class="container">
-                <div class="row">
-                    <div class="abt_col_1">
-                        <div class="_tital text-center">
-                            <h2>Skills</h2>
-                        </div>
-
-                        <div class="hover-container">
-                            <span class="skill_info">
-                                <strong>Programming Languages:</strong> C, C++, JavaScript, TypeScript, Python
-                            </span>
-                            <div class="skill-card">
-                                <span>C/C++</span>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 95%"></div>
-                                </div>
-
-                                <span>JavaScript</span>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 90%"></div>
-                                </div>
-
-                                <span>Python</span>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 65%"></div>
-                                </div>
-
-                                <span>TypeScript</span>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 83%"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hover-container">
-                            <span class="skill_info">
-                                <strong>Technical Courses:</strong> DSA, DBMS, OOP, OS
-                            </span>
-                            <div class="skill-card">
-                                <span>DSA</span>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 95%"></div>
-                                </div>
-
-                                <span>DBMS</span>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 85%"></div>
-                                </div>
-
-                                <span>OOP</span>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 93%"></div>
-                                </div>
-                                <span>OS</span>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 83%"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hover-container">
-                            <span class="skill_info">
-                                <strong>Web Technologies:</strong> HTML5, CSS3, React.js, Node.js, Express.js, RESTful
-                                APIs,
-                            </span>
-                            <div class="skill-card">
-                                <span>HTML5</span>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 98%"></div>
-                                </div>
-
-                                <span>CSS3/Tailwind</span>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 85%"></div>
-                                </div>
-
-                                <span>React.Js</span>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 95%"></div>
-                                </div>
-
-                                <span>Node.Js</span>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 90%"></div>
-                                </div>
-                                <span>Express.Js</span>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 60%"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hover-container">
-                            <span class="skill_info">
-                                <strong>Tools:</strong> VS Code, Git-GitHub,Power BI, Excel
-                            </span>
-                            <div class="skill-card">
-                                <span>VS code/ GitHub</span>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 95%"></div>
-                                </div>
-
-                                <span>Power BI/ Excel</span>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 80%"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hover-container">
-                            <span class="skill_info">
-                                <strong>Databases:</strong> SQL, MySQL, MongoDB
-                            </span>
-                            <div class="skill-card">
-                                <span>SQL</span>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 70%"></div>
-                                </div>
-
-                                <span>MySQL</span>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 85%"></div>
-                                </div>
-
-                                <span>MongoDB</span>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 85%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="abt_col_2">
-                        <div class="_tital text-center">
-                            <h2>About me</h2>
-                        </div>
-                        <ul class="about-info ">
-                            <li class="d-flex">
-                                <h4>Name:</h4>
-                                <span class="sr">Vikrant Chauhan</span>
-                            </li>
-                            <li class="d-flex">
-                                <h4>Education:</h4>
-                                <span class="sr">Bachelor of Technology</span>
-                            </li>
-                            <li class="d-flex">
-                                <h4>Domain:</h4>
-                                <span class="sr">Software Developement</span>
-                            </li>
-                            <li class="d-flex">
-                                <h4>Branch:</h4>
-                                <span class="sr">Electronics &amp; Communication Engineering </span>
-                            </li>
-                            <li class="d-flex">
-                                <h4>Address:</h4>
-                                <span class="sr">Varanashi,Uttar Pradesh</span>
-                            </li>
-                            <li class="d-flex">
-                                <h4>Language:</h4>
-                                <span class="sr">English and Hindi</span>
-                            </li>
-                            <li class="d-flex">
-                                <h4>Interest:</h4>
-                                <span class="sr">Traveling , Drawing &amp; Photography</span>
-                            </li>
-                            <li class="d-flex">
-                                <h4>Other Skills:</h4>
-                                <span class="sr">Debugging, Problem-Solving, Communication, Collaboration, Proactive
-                                    Learning and Adaptability </span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="resume_sec">
-            <div class="container">
-                <div class="row">
-                    <div class="_tital ">
-                        <h2 class="resume-heading">Resume</h2>
-                    </div>
-                    <div id="rescontent">
-                        <p>I'm a passionate software developer with expertise in C, C++, and a solid
-                            foundation in Data Structures and Algorithms. My skills span both front-end (HTML5, CSS3,
-                            JavaScript, React) and back-end (Node.Js, Express.js, MongoDB, MySQL, Postman) development,
-                            enabling me to build
-                            comprehensive
-                            and efficient web applications. I thrive on problem-solving and continuously learning
-                            new technologies to enhance my craft. I'm eager to contribute to innovative and
-                            impactful software solutions.</p>
-                    </div>
-
-                </div>
-                <br>
-                <div class="row">
-                    <div class="_tital">
-                        <h3>Education</h3>
-                    </div>
-                    <div class="underline"></div>
-                </div>
-                <div class="row">
-                    <div class="col_6">
-                        <div class="resume-wrap">
-                            <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <div>
-                                    <span class="subhead">2021-Present</span>
-                                    <h3>NATIONAL INSTITUTE OF TECHNOLOGY KARNATAKA, SURATHKAL</h3>
-                                    <span class="descrip">Bachelor of Technology (Electronics and Communication
-                                        Engineering)</span>
-                                    <p class="subdes">CGPA: 6.80</p>
-                                </div>
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt6E9j1alP1WPbeYjvtB2H3E_SPONx5DpYyGiXzsWyXdzLkJRAnceMgGdJaebN0iZmRcA&usqp=CAU"
-                                    alt="NITK Logo" style="height: 90px; width: 90px; object-fit: contain;">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col_6">
-                        <div class="resume-wrap">
-                            <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <div>
-                                    <span class="subhead">2018-2020</span>
-                                    <h3>JAWAHAR NAVODAYA VIDYALAYA, BENGALURU URBAN KARNATAKA</h3>
-                                    <span class="descrip">INTERMEDIATE</span>
-                                    <p class="subdes">Percentage: 89.2</p>
-                                </div>
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJNLDV-7TBpy9BgCZG7njcRyvCv7tFUtvSvg&s"
-                                    alt="JNV Logo" style="height: 90px; width: 90px; object-fit: contain;">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col_6">
-                        <div class="resume-wrap">
-                            <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <div>
-                                    <span class="subhead">2013-2018</span>
-                                    <h3>JAWAHAR NAVODAYA VIDYALAYA, MAU UTTAR PRADESH</h3>
-                                    <span class="descrip">HIGH SCHOOL</span>
-                                    <p class="subdes">Percentage: 90.8</p>
-                                </div>
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJNLDV-7TBpy9BgCZG7njcRyvCv7tFUtvSvg&s"
-                                    alt="JNV Logo" style="height: 90px; width: 90px; object-fit: contain;">
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row">
-                    <div class="_tital">
-                        <h3>Projects</h3>
-                    </div>
-                    <div class="underline"></div>
-                </div>
-                <div class="row">
-                    <div class="col_6">
-                        <div class="resume-wrap ">
-                            <span class="subhead">VIDEOMELA</span>
-                            <p> Developed a high-performance video-sharing platform, scalable for 1000+ daily users,
-                                leveraging Redux Toolkit for
-                                optimized state management and faster rendering.</p>
-                            <p> Architected a secure backend with JWT-based authentication, bcrypt encryption, and
-                                MongoDB, ensuring
-                                seamless user data protection and fast query execution.</p>
-                            <p> Integrated Cloudinary, reducing media upload latency by 30% and ensuring smooth video
-                                streaming under heavy
-                                traffic.</p>
-                            <a class="project-link" href="https://github.com/vikrant48/Video_Mela_frontend">View
-                                Project</a>
-                        </div>
-                    </div>
-
-                    <div class="col_6">
-                        <div class="resume-wrap ">
-                            <span class="subhead">NEWSMELA</span>
-                            <p> Built a dynamic news aggregation platform with real-time updates, allowing users to
-                                filter news by categories, check
-                                live weather updates, and use a currency converter, all powered by multiple APIs.</p>
-                            <p> Optimized frontend performance by implementing efficient state management, lazy loading,
-                                and API caching, improving
-                                data fetching speed by 40%.</p>
-                            <p> Enhanced user experience by adding dark mode, mobile-first design, and seamless
-                                responsiveness across all devices.</p>
-                            <a class="project-link" href="https://github.com/vikrant48/NewsMela">View Project</a>
-
-                        </div>
-                    </div>
-                    <div class="col_6">
-                        <div class="resume-wrap ">
-                            <span class="subhead">Graph Algorithms Visualizer</span>
-                            <p> Developed a graphical interface using SFML to dynamically create, visualize, and
-                                interact with graph nodes and edges.</p>
-                            <p> Implemented BFS, DFS, and Dijkstra’s algorithms for graph traversal and shortest-path
-                                visualization, with real-time
-                                rendering of algorithm animations.</p>
-                            <p>Leveraged APIs and optimized algorithms to handle high traffic, delivering fast and
-                                reliable performance across devices.</p>
-                            <a class="project-link" href="https://github.com/vikrant48/Graph_Algorithms_Visualizer">View
-                                Project</a>
-
-                        </div>
-                    </div>
-
-                    <div class="col_6">
-                        <div class="resume-wrap ">
-                            <span class="subhead">Revenue Analysis – Hospitality Sector</span>
-                            <p>Developed a Power BI dashboard for Atliq Grands to analyze a three-month decline in
-                                market share and revenue.</p>
-                            <p>Provided insights that identified key trends, contributing to a projected 20% recovery.
-                            </p>
-                            <a class="project-link"
-                                href="https://nitkeduin-my.sharepoint.com/:u:/g/personal/vikrantchauhan_211ec163_nitk_edu_in/EU68BaHE5xpAiL26ts9uoZEBsnZtvshgpxO0so8zCHlSeg?e=uoZMri">View
-                                Project</a>
-
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row">
-                    <div class="_tital">
-                        <h3>Coding Profile</h3>
-                    </div>
-                    <div class="underline"></div>
-                </div>
-                <div class="row">
-                    <div class="progress-container">
-                        <a href="https://leetcode.com/u/vikrantlee">LeetCode</a>
-                        <div class="circular-progress">
-                            <h1 id="totalSolved">0</h1>
-                        </div>
-                        <p><span id="solved"><i class="fa-solid fa-check" style="color: #63E6BE;"></i>Solved</span></p>
-                        <!-- <p id="attempting">0 Attempting</p> -->
-                        <p id="totalques">Out of 0</p>
-
-                        <div class="details">
-                            <div class="easy">
-                                <p>Easy</p>
-                                <p id="easySolved">0/0</p>
-                            </div>
-                            <div class="medium">
-                                <p>Medium</p>
-                                <p id="mediumSolved">0/0</p>
-                            </div>
-                            <div class="hard">
-                                <p>Hard</p>
-                                <p id="hardSolved">0/0</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-container">
-                        <a href="https://github.com/vikrant48">GitHub</a>
-                        <div class="circular-progress">
-                            <img id="avatar" src="" alt="Avtar" style="border-radius: 50%;">
-                        </div>
-                        <div id="bio">bio</div>
-
-                        <div class="details">
-                            <div class="easy">
-                                <p>Public_repos</p>
-                                <p id="public_repos">0</p>
-                            </div>
-                            <div class="medium">
-                                <p>Followers</p>
-                                <p id="followers">0</p>
-                            </div>
-                            <div class="hard">
-                                <p>Created_On</p>
-                                <p id="created_on">0</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="messege_sec">
-            <div class="container">
-                <div class="row">
-                    <div class="_tital ">
-                        <h4 id="ms_center">Have a Question&#63;</h4>
-                    </div>
-
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="name" placeholder="Full Name" required>
-                        <input type="email" name="email" placeholder="E-mail" required>
-                        <input type="tel" name="number" placeholder="Phone Number">
-                        <input type="text" name="sub" placeholder="Subject">
-                        <textarea name="message" rows="5" placeholder="Message"></textarea>
-                        <span id="msg"></span>
-                        <div class="btn_cnt">
-                            <button class="btn  text-center" id="sm" type="submit">Send Message</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer id="footer_sec">
+      <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="container">
-            <div class="row" id="fr">
-                <div class="foot2">
-                    <div class="f_title">
-                        <h3>Contact me </h3>
+          <div id="navleft">
+            <img
+              src="img/logoimg.png"
+              class="vimg"
+              id="profilePic"
+              alt="Vikrant Chauhan Profile Picture"
+              loading="lazy"
+            />
+            <h1>Vikrant Chauhan</h1>
+          </div>
+
+          <!-- Modal for larger image -->
+          <div
+            id="imgModal"
+            class="modal"
+            role="dialog"
+            aria-labelledby="modal-title"
+            aria-hidden="true"
+          >
+            <div class="modal-content">
+              <span class="close" aria-label="Close modal">&times;</span>
+              <img
+                class="modal-img"
+                id="modalImg"
+                alt="Enlarged profile picture"
+              />
+            </div>
+          </div>
+
+          <div id="navright">
+            <ul class="nav-menu">
+              <img
+                src="img/me3.png"
+                alt="Menu Icon"
+                class="menu-img"
+                loading="lazy"
+              />
+              <li>
+                <a
+                  href="#home_sec"
+                  class="nav_link"
+                  aria-label="Go to home section"
+                  ><span>Home</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about_sec"
+                  class="nav_link"
+                  aria-label="Go to about section"
+                  ><span>About</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="#resume_sec"
+                  class="nav_link"
+                  aria-label="Go to resume section"
+                  ><span>Resume</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="#message_sec"
+                  class="nav_link"
+                  aria-label="Go to message section"
+                  ><span>Message me</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="#footer_sec"
+                  class="nav_link"
+                  aria-label="Go to contact section"
+                  ><span>Contact me</span></a
+                >
+              </li>
+            </ul>
+            <button
+              class="hamburger"
+              aria-label="Toggle navigation menu"
+              aria-expanded="false"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <section id="home_sec" class="hero-section">
+        <div class="container">
+          <div class="row">
+            <div class="home_col_1">
+              <div class="text">
+                <span id="hi">Hello Everybody! I'm</span>
+                <h1 id="myname"><span>VIKRANT CHAUHAN</span></h1>
+                <span id="web" aria-label="Web Developer">WEB DEVELOPER</span>
+              </div>
+              <div id="homebtn" class="cta-buttons">
+                <a
+                  href="https://drive.google.com/file/d/1uO5jdb-ZGnCZ5ZcJ8fAUrKswoL1EIMfC/view?usp=sharing"
+                  class="btn btn-primary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Download resume"
+                >
+                  <i class="fas fa-download" aria-hidden="true"></i>
+                  Download Resume
+                </a>
+                <a
+                  href="https://github.com/vikrant48"
+                  class="btn btn-secondary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit GitHub profile"
+                >
+                  <i class="fab fa-github" aria-hidden="true"></i>
+                  Visit GitHub
+                </a>
+              </div>
+            </div>
+            <div class="home_col_2">
+              <img
+                src="img/me3.png"
+                alt="Vikrant Chauhan - Web Developer"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main id="main-content">
+      <section id="about_sec" class="about-section">
+        <div class="container">
+          <div class="row">
+            <div class="abt_col_1">
+              <div class="_tital text-center">
+                <h2>Skills</h2>
+              </div>
+              <div class="skills-container">
+                <div class="hover-container">
+                  <span class="skill_info">
+                    <strong>Programming Languages:</strong> C, C++, JavaScript,
+                    TypeScript, Python
+                  </span>
+                  <div
+                    class="skill-card"
+                    role="region"
+                    aria-label="Programming Languages Skills"
+                  >
+                    <div
+                      class="skill-item"
+                      tabindex="0"
+                      data-popup="C/C++: Strong in algorithms, competitive programming, and system-level coding."
+                    >
+                      <span>C/C++</span>
+                      <div
+                        class="progress"
+                        role="progressbar"
+                        aria-valuenow="95"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      >
+                        <div class="progress-bar" style="width: 95%"></div>
+                      </div>
                     </div>
-                    <ul>
-                        <li><i class="fa-solid fa-envelope"></i><a href="mailto:vikrantchauhan9794.com">E-mail</a></li>
-                        <li><i class="fa-solid fa-location-dot"></i><a
-                                href="https://maps.app.goo.gl/pXa6z6tnraSWKVNK9">Varanasi, India</a></li>
-                        <li><i class="fa-solid fa-phone"></i><a href="tel://6386696764">6386696764</a></li>
-                    </ul>
-
-                </div>
-                <div class="foot3">
-                    <div class="f_title">
-                        <h3>Follow me </h3>
+                    <div
+                      class="skill-item"
+                      tabindex="0"
+                      data-popup="JavaScript: ES6+, DOM manipulation, web apps, and frameworks."
+                    >
+                      <span>JavaScript</span>
+                      <div
+                        class="progress"
+                        role="progressbar"
+                        aria-valuenow="90"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      >
+                        <div class="progress-bar" style="width: 90%"></div>
+                      </div>
                     </div>
-                    <ul>
-
-                        <li><i class="fa-brands fa-linkedin"></i><a
-                                href="https://www.linkedin.com/in/vikrant-chauhan-bb8669229?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
-                                linkedIn</a>
-                        </li>
-
-                        <li><i class="fa-brands fa-discord"></i><a href="https://discord.com/invite/DPv8dVvB">
-                                Discod</a></li>
-                        <li><i class="fa-brands fa-facebook"></i><a
-                                href="https://www.facebook.com/vikrant.chauhan.90663894"> Facebook</a></li>
-                        <li><i class="fa-brands fa-instagram"></i><a href="https://www.instagram.com/vi.krant4693/">
-                                Instagram</a></li>
-                    </ul>
+                    <div
+                      class="skill-item"
+                      tabindex="0"
+                      data-popup="Python: Scripting, automation, and data analysis."
+                    >
+                      <span>Python</span>
+                      <div
+                        class="progress"
+                        role="progressbar"
+                        aria-valuenow="65"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      >
+                        <div class="progress-bar" style="width: 65%"></div>
+                      </div>
+                    </div>
+                    <div
+                      class="skill-item"
+                      tabindex="0"
+                      data-popup="TypeScript: Typed JavaScript for scalable projects."
+                    >
+                      <span>TypeScript</span>
+                      <div
+                        class="progress"
+                        role="progressbar"
+                        aria-valuenow="83"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      >
+                        <div class="progress-bar" style="width: 83%"></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <div class="hover-container">
+                  <span class="skill_info">
+                    <strong>Technical Courses:</strong> DSA, DBMS, OOP, OS
+                  </span>
+                  <div
+                    class="skill-card"
+                    role="region"
+                    aria-label="Technical Courses Skills"
+                  >
+                    <div
+                      class="skill-item"
+                      tabindex="0"
+                      data-popup="DSA: Data Structures & Algorithms for problem solving."
+                    >
+                      <span>DSA</span>
+                      <div
+                        class="progress"
+                        role="progressbar"
+                        aria-valuenow="95"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      >
+                        <div class="progress-bar" style="width: 95%"></div>
+                      </div>
+                    </div>
+                    <div
+                      class="skill-item"
+                      tabindex="0"
+                      data-popup="DBMS: Database design and SQL queries."
+                    >
+                      <span>DBMS</span>
+                      <div
+                        class="progress"
+                        role="progressbar"
+                        aria-valuenow="85"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      >
+                        <div class="progress-bar" style="width: 85%"></div>
+                      </div>
+                    </div>
+                    <div
+                      class="skill-item"
+                      tabindex="0"
+                      data-popup="OOP: Object-Oriented Programming concepts."
+                    >
+                      <span>OOP</span>
+                      <div
+                        class="progress"
+                        role="progressbar"
+                        aria-valuenow="93"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      >
+                        <div class="progress-bar" style="width: 93%"></div>
+                      </div>
+                    </div>
+                    <div
+                      class="skill-item"
+                      tabindex="0"
+                      data-popup="OS: Operating System fundamentals."
+                    >
+                      <span>OS</span>
+                      <div
+                        class="progress"
+                        role="progressbar"
+                        aria-valuenow="83"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      >
+                        <div class="progress-bar" style="width: 83%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hover-container">
+                  <span class="skill_info">
+                    <strong>Web Technologies:</strong> HTML5, CSS3, React.js,
+                    Node.js, Express.js, RESTful APIs
+                  </span>
+                  <div
+                    class="skill-card"
+                    role="region"
+                    aria-label="Web Technologies Skills"
+                  >
+                    <div
+                      class="skill-item"
+                      tabindex="0"
+                      data-popup="HTML5: Semantic markup and accessibility."
+                    >
+                      <span>HTML5</span>
+                      <div
+                        class="progress"
+                        role="progressbar"
+                        aria-valuenow="98"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      >
+                        <div class="progress-bar" style="width: 98%"></div>
+                      </div>
+                    </div>
+                    <div
+                      class="skill-item"
+                      tabindex="0"
+                      data-popup="CSS3/Tailwind: Responsive and utility-first styling."
+                    >
+                      <span>CSS3/Tailwind</span>
+                      <div
+                        class="progress"
+                        role="progressbar"
+                        aria-valuenow="85"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      >
+                        <div class="progress-bar" style="width: 85%"></div>
+                      </div>
+                    </div>
+                    <div
+                      class="skill-item"
+                      tabindex="0"
+                      data-popup="React.Js: SPA development and state management."
+                    >
+                      <span>React.Js</span>
+                      <div
+                        class="progress"
+                        role="progressbar"
+                        aria-valuenow="95"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      >
+                        <div class="progress-bar" style="width: 95%"></div>
+                      </div>
+                    </div>
+                    <div
+                      class="skill-item"
+                      tabindex="0"
+                      data-popup="Node.Js: Backend APIs and server-side logic."
+                    >
+                      <span>Node.Js</span>
+                      <div
+                        class="progress"
+                        role="progressbar"
+                        aria-valuenow="90"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      >
+                        <div class="progress-bar" style="width: 90%"></div>
+                      </div>
+                    </div>
+                    <div
+                      class="skill-item"
+                      tabindex="0"
+                      data-popup="Express.Js: RESTful API development."
+                    >
+                      <span>Express.Js</span>
+                      <div
+                        class="progress"
+                        role="progressbar"
+                        aria-valuenow="60"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      >
+                        <div class="progress-bar" style="width: 60%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hover-container">
+                  <span class="skill_info">
+                    <strong>Tools:</strong> VS Code, Git-GitHub, Power BI, Excel
+                  </span>
+                  <div class="skill-card" role="region" aria-label="Tools Skills">
+                    <div
+                      class="skill-item"
+                      tabindex="0"
+                      data-popup="VS Code/GitHub: Code editing and version control."
+                    >
+                      <span>VS Code/ GitHub</span>
+                      <div
+                        class="progress"
+                        role="progressbar"
+                        aria-valuenow="95"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      >
+                        <div class="progress-bar" style="width: 95%"></div>
+                      </div>
+                    </div>
+                    <div
+                      class="skill-item"
+                      tabindex="0"
+                      data-popup="Power BI/Excel: Data analysis and visualization."
+                    >
+                      <span>Power BI/ Excel</span>
+                      <div
+                        class="progress"
+                        role="progressbar"
+                        aria-valuenow="80"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      >
+                        <div class="progress-bar" style="width: 80%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hover-container">
+                  <span class="skill_info">
+                    <strong>Databases:</strong> SQL, MySQL, MongoDB
+                  </span>
+                  <div class="skill-card" role="region" aria-label="Database Skills">
+                    <div
+                      class="skill-item"
+                      tabindex="0"
+                      data-popup="SQL: Relational database queries."
+                    >
+                      <span>SQL</span>
+                      <div
+                        class="progress"
+                        role="progressbar"
+                        aria-valuenow="70"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      >
+                        <div class="progress-bar" style="width: 70%"></div>
+                      </div>
+                    </div>
+                    <div
+                      class="skill-item"
+                      tabindex="0"
+                      data-popup="MySQL: Structured data management."
+                    >
+                      <span>MySQL</span>
+                      <div
+                        class="progress"
+                        role="progressbar"
+                        aria-valuenow="85"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      >
+                        <div class="progress-bar" style="width: 85%"></div>
+                      </div>
+                    </div>
+                    <div
+                      class="skill-item"
+                      tabindex="0"
+                      data-popup="MongoDB: NoSQL database for scalable apps."
+                    >
+                      <span>MongoDB</span>
+                      <div
+                        class="progress"
+                        role="progressbar"
+                        aria-valuenow="85"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      >
+                        <div class="progress-bar" style="width: 85%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="abt_col_2">
+              <div class="_tital text-center">
+                <h2>About me</h2>
+              </div>
+              <ul class="about-info">
+                <li class="d-flex">
+                  <h4>Name:</h4>
+                  <span class="sr">Vikrant Chauhan</span>
+                </li>
+                <li class="d-flex">
+                  <h4>Education:</h4>
+                  <span class="sr">Bachelor of Technology</span>
+                </li>
+                <li class="d-flex">
+                  <h4>Domain:</h4>
+                  <span class="sr">Software Development</span>
+                </li>
+                <li class="d-flex">
+                  <h4>Branch:</h4>
+                  <span class="sr"
+                    >Electronics &amp; Communication Engineering</span
+                  >
+                </li>
+                <li class="d-flex">
+                  <h4>Address:</h4>
+                  <span class="sr">Varanasi, Uttar Pradesh</span>
+                </li>
+                <li class="d-flex">
+                  <h4>Language:</h4>
+                  <span class="sr">English and Hindi</span>
+                </li>
+                <li class="d-flex">
+                  <h4>Interest:</h4>
+                  <span class="sr">Traveling, Drawing &amp; Photography</span>
+                </li>
+                <li class="d-flex">
+                  <h4>Other Skills:</h4>
+                  <span class="sr"
+                    >Debugging, Problem-Solving, Communication, Collaboration,
+                    Proactive Learning and Adaptability</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="resume_sec" class="resume-section">
+        <div class="container">
+          <div class="row">
+            <div class="_tital">
+              <h2 class="resume-heading">Resume</h2>
+            </div>
+            <div id="rescontent">
+              <p>
+                I'm a passionate software developer with expertise in C, C++,
+                and a solid foundation in Data Structures and Algorithms. My
+                skills span both front-end (HTML5, CSS3, JavaScript, React) and
+                back-end (Node.Js, Express.js, MongoDB, MySQL, Postman)
+                development, enabling me to build comprehensive and efficient
+                web applications. I thrive on problem-solving and continuously
+                learning new technologies to enhance my craft. I'm eager to
+                contribute to innovative and impactful software solutions.
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="_tital">
+              <h3>Education</h3>
+            </div>
+            <div class="underline"></div>
+          </div>
+
+          <div class="row">
+            <div class="col_6">
+              <article class="resume-wrap">
+                <div class="education-item">
+                  <div class="education-content">
+                    <span class="subhead">2021-Present</span>
+                    <h3>
+                      NATIONAL INSTITUTE OF TECHNOLOGY KARNATAKA, SURATHKAL
+                    </h3>
+                    <span class="descrip"
+                      >Bachelor of Technology (Electronics and Communication
+                      Engineering)</span
+                    >
+                    <p class="subdes">CGPA: 6.80</p>
+                  </div>
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt6E9j1alP1WPbeYjvtB2H3E_SPONx5DpYyGiXzsWyXdzLkJRAnceMgGdJaebN0iZmRcA&usqp=CAU"
+                    alt="NITK Logo"
+                    loading="lazy"
+                  />
+                </div>
+              </article>
             </div>
 
-            <div class="footer_rights">
-                Copyright &#169; 2024 All rights reserved | This portfolio made by Vikrant
+            <div class="col_6">
+              <article class="resume-wrap">
+                <div class="education-item">
+                  <div class="education-content">
+                    <span class="subhead">2018-2020</span>
+                    <h3>
+                      JAWAHAR NAVODAYA VIDYALAYA, BENGALURU URBAN KARNATAKA
+                    </h3>
+                    <span class="descrip">INTERMEDIATE</span>
+                    <p class="subdes">Percentage: 89.2</p>
+                  </div>
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJNLDV-7TBpy9BgCZG7njcRyvCv7tFUtvSvg&s"
+                    alt="JNV Logo"
+                    loading="lazy"
+                  />
+                </div>
+              </article>
             </div>
+
+            <div class="col_6">
+              <article class="resume-wrap">
+                <div class="education-item">
+                  <div class="education-content">
+                    <span class="subhead">2013-2018</span>
+                    <h3>JAWAHAR NAVODAYA VIDYALAYA, MAU UTTAR PRADESH</h3>
+                    <span class="descrip">HIGH SCHOOL</span>
+                    <p class="subdes">Percentage: 90.8</p>
+                  </div>
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJNLDV-7TBpy9BgCZG7njcRyvCv7tFUtvSvg&s"
+                    alt="JNV Logo"
+                    loading="lazy"
+                  />
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="_tital">
+              <h3>Projects</h3>
+            </div>
+            <div class="underline"></div>
+          </div>
+
+          <div class="row">
+            <div class="col_6">
+              <article class="resume-wrap">
+                <h4 class="subhead">VIDEOMELA</h4>
+                <p>
+                  Developed a high-performance video-sharing platform, scalable
+                  for 1000+ daily users, leveraging Redux Toolkit for optimized
+                  state management and faster rendering.
+                </p>
+                <p>
+                  Architected a secure backend with JWT-based authentication,
+                  bcrypt encryption, and MongoDB, ensuring seamless user data
+                  protection and fast query execution.
+                </p>
+                <p>
+                  Integrated Cloudinary, reducing media upload latency by 30%
+                  and ensuring smooth video streaming under heavy traffic.
+                </p>
+                <a
+                  class="project-link"
+                  href="https://github.com/vikrant48/Video_Mela_frontend"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View VideoMela project on GitHub"
+                >
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                  View Project
+                </a>
+              </article>
+            </div>
+
+            <div class="col_6">
+              <article class="resume-wrap">
+                <h4 class="subhead">NEWSMELA</h4>
+                <p>
+                  Built a dynamic news aggregation platform with real-time
+                  updates, allowing users to filter news by categories, check
+                  live weather updates, and use a currency converter, all
+                  powered by multiple APIs.
+                </p>
+                <p>
+                  Optimized frontend performance by implementing efficient state
+                  management, lazy loading, and API caching, improving data
+                  fetching speed by 40%.
+                </p>
+                <p>
+                  Enhanced user experience by adding dark mode, mobile-first
+                  design, and seamless responsiveness across all devices.
+                </p>
+                <a
+                  class="project-link"
+                  href="https://github.com/vikrant48/NewsMela"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View NewsMela project on GitHub"
+                >
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                  View Project
+                </a>
+              </article>
+            </div>
+
+            <div class="col_6">
+              <article class="resume-wrap">
+                <h4 class="subhead">Graph Algorithms Visualizer</h4>
+                <p>
+                  Developed a graphical interface using SFML to dynamically
+                  create, visualize, and interact with graph nodes and edges.
+                </p>
+                <p>
+                  Implemented BFS, DFS, and Dijkstra's algorithms for graph
+                  traversal and shortest-path visualization, with real-time
+                  rendering of algorithm animations.
+                </p>
+                <p>
+                  Leveraged APIs and optimized algorithms to handle high
+                  traffic, delivering fast and reliable performance across
+                  devices.
+                </p>
+                <a
+                  class="project-link"
+                  href="https://github.com/vikrant48/Graph_Algorithms_Visualizer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View Graph Algorithms Visualizer project on GitHub"
+                >
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                  View Project
+                </a>
+              </article>
+            </div>
+
+            <div class="col_6">
+              <article class="resume-wrap">
+                <h4 class="subhead">Revenue Analysis – Hospitality Sector</h4>
+                <p>
+                  Developed a Power BI dashboard for Atliq Grands to analyze a
+                  three-month decline in market share and revenue.
+                </p>
+                <p>
+                  Provided insights that identified key trends, contributing to
+                  a projected 20% recovery.
+                </p>
+                <a
+                  class="project-link"
+                  href="https://nitkeduin-my.sharepoint.com/:u:/g/personal/vikrantchauhan_211ec163_nitk_edu_in/EU68BaHE5xpAiL26ts9uoZEBsnZtvshgpxO0so8zCHlSeg?e=uoZMri"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View Revenue Analysis project"
+                >
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                  View Project
+                </a>
+              </article>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="_tital">
+              <h3>Coding Profile</h3>
+            </div>
+            <div class="underline"></div>
+          </div>
+
+          <div class="row">
+            <div class="progress-container">
+              <a
+                href="https://leetcode.com/u/vikrantlee"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit LeetCode profile"
+                >LeetCode</a
+              >
+              <div class="circular-progress" role="status" aria-live="polite">
+                <h1 id="totalSolved">0</h1>
+              </div>
+              <p>
+                <span id="solved"
+                  ><i class="fa-solid fa-check" aria-hidden="true"></i
+                  >Solved</span
+                >
+              </p>
+              <p id="totalques">Out of 0</p>
+
+              <div class="details">
+                <div class="easy">
+                  <p>Easy</p>
+                  <p id="easySolved">0/0</p>
+                </div>
+                <div class="medium">
+                  <p>Medium</p>
+                  <p id="mediumSolved">0/0</p>
+                </div>
+                <div class="hard">
+                  <p>Hard</p>
+                  <p id="hardSolved">0/0</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="progress-container">
+              <a
+                href="https://github.com/vikrant48"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit GitHub profile"
+                >GitHub</a
+              >
+              <div class="circular-progress">
+                <img id="avatar" src="" alt="GitHub Avatar" loading="lazy" />
+              </div>
+              <div id="bio">bio</div>
+
+              <div class="details">
+                <div class="easy">
+                  <p>Public_repos</p>
+                  <p id="public_repos">0</p>
+                </div>
+                <div class="medium">
+                  <p>Followers</p>
+                  <p id="followers">0</p>
+                </div>
+                <div class="hard">
+                  <p>Created_On</p>
+                  <p id="created_on">0</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="message_sec" class="message-section">
+        <div class="container">
+          <form class="contact-form">
+            <div class="_tital text-center">
+              <h2>Send Me a Message</h2>
+            </div>
+            <div class="form-group">
+              <label for="name">What's your name?</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Your email address?</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="message">How can I help you?</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Type your message here..."
+                required
+              ></textarea>
+            </div>
+            <div class="btn_cnt">
+              <button type="submit" class="btn">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer_sec" class="footer">
+      <div class="container">
+        <div class="row" id="fr">
+          <div class="foot2">
+            <div class="f_title">
+              <h3>Contact me</h3>
+            </div>
+            <ul class="contact-list">
+              <li>
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <a
+                  href="mailto:vikrantchauhan9794@gmail.com"
+                  aria-label="Send email to vikrantchauhan9794@gmail.com"
+                  >E-mail</a
+                >
+              </li>
+              <li>
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <a
+                  href="https://maps.app.goo.gl/pXa6z6tnraSWKVNK9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View location on Google Maps"
+                  >Varanasi, India</a
+                >
+              </li>
+              <li>
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                <a href="tel:+916386696764" aria-label="Call 6386696764"
+                  >6386696764</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="foot3">
+            <div class="f_title">
+              <h3>Follow me</h3>
+            </div>
+            <ul class="social-list">
+              <li>
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                <a
+                  href="https://www.linkedin.com/in/vikrant-chauhan-bb8669229?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit LinkedIn profile"
+                >
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <i class="fa-brands fa-discord" aria-hidden="true"></i>
+                <a
+                  href="https://discord.com/invite/DPv8dVvB"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Join Discord server"
+                >
+                  Discord
+                </a>
+              </li>
+              <li>
+                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                <a
+                  href="https://www.facebook.com/vikrant.chauhan.90663894"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Facebook profile"
+                >
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                <a
+                  href="https://www.instagram.com/vi.krant4693/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Instagram profile"
+                >
+                  Instagram
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
+        <div class="footer_rights">
+          <p>
+            &copy; 2024 All rights reserved | This portfolio made by Vikrant
+            Chauhan
+          </p>
+        </div>
+      </div>
     </footer>
+
     <script>
-        // for image 
-        let img = document.getElementById("profilePic");
-        let modal = document.getElementById("imgModal");
-        let modalImg = document.getElementById("modalImg");
-        let span = document.getElementsByClassName('close')[0]
+      // Utility functions
+      const debounce = (func, wait) => {
+        let timeout;
+        return function executedFunction(...args) {
+          const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+          };
+          clearTimeout(timeout);
+          timeout = setTimeout(later, wait);
+        };
+      };
 
-        img.onclick = function () {
-            modal.style.display = "block";
-            modalImg.src = this.src;
-        }
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
+      // Image modal functionality
+      const initImageModal = () => {
+        const img = document.getElementById("profilePic");
+        const modal = document.getElementById("imgModal");
+        const modalImg = document.getElementById("modalImg");
+        const closeBtn = document.querySelector(".close");
 
-        // for hunberger
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('#navright ul');
+        if (!img || !modal || !modalImg || !closeBtn) return;
 
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('show');
+        const openModal = () => {
+          modal.style.display = "block";
+          modalImg.src = img.src;
+          modal.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+        };
+
+        const closeModal = () => {
+          modal.style.display = "none";
+          modal.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "auto";
+        };
+
+        img.addEventListener("click", openModal);
+        closeBtn.addEventListener("click", closeModal);
+
+        modal.addEventListener("click", (event) => {
+          if (event.target === modal) {
+            closeModal();
+          }
         });
 
-        // home animation 
-        const webElement = document.getElementById('web');
+        // Close modal on escape key
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && modal.style.display === "block") {
+            closeModal();
+          }
+        });
+      };
 
-        function resetAnimation() {
-            webElement.style.animation = 'none';
-            webElement.offsetHeight; // Trigger reflow
-            webElement.style.animation = 'typing 3s steps(20, end), blink-caret .75s step-end infinite';
-        }
+      // Mobile navigation
+      const initMobileNav = () => {
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector("#navright ul");
+        const navLinksItems = document.querySelectorAll(".nav_link");
+
+        if (!hamburger || !navLinks) return;
+
+        const toggleMenu = () => {
+          const isExpanded = hamburger.getAttribute("aria-expanded") === "true";
+          hamburger.setAttribute("aria-expanded", !isExpanded);
+          hamburger.classList.toggle("active");
+          navLinks.classList.toggle("show");
+        };
+
+        hamburger.addEventListener("click", toggleMenu);
+
+        // Close menu when clicking on nav links
+        navLinksItems.forEach((link) => {
+          link.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navLinks.classList.remove("show");
+            hamburger.setAttribute("aria-expanded", "false");
+          });
+        });
+      };
+
+      // Typing animation
+      const initTypingAnimation = () => {
+        const webElement = document.getElementById("web");
+        if (!webElement) return;
+
+        const resetAnimation = () => {
+          webElement.style.animation = "none";
+          webElement.offsetHeight; // Trigger reflow
+          webElement.style.animation =
+            "typing 3s steps(20, end), blink-caret .75s step-end infinite";
+        };
 
         setInterval(resetAnimation, 3000);
+      };
 
-        // Leetcode 
-        async function fetchLeetcodeData() {
-            const resp = await fetch('https://leetcode-api-faisalshohag.vercel.app/vikrantlee')
-            const data = await resp.json()
+      // API data fetching with error handling
+      const fetchWithTimeout = async (url, options = {}, timeout = 5000) => {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), timeout);
 
-            // console.log(data)
+        try {
+          const response = await fetch(url, {
+            ...options,
+            signal: controller.signal,
+          });
+          clearTimeout(timeoutId);
 
-            document.getElementById('totalSolved').textContent = data.totalSolved;
-            document.getElementById('totalques').textContent = `Out of ${data.totalQuestions}`;
-            document.getElementById('solved').innerHTML = `<i class="fa-solid fa-check" style="color: #63E6BE; margin-right: 5px;"></i> Solved`;
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
 
-            document.getElementById('easySolved').textContent = `${data.easySolved}/${data.totalEasy}`;
-            document.getElementById('mediumSolved').textContent = `${data.mediumSolved}/${data.totalMedium}`;
-            document.getElementById('hardSolved').textContent = `${data.hardSolved}/${data.totalHard}`;
+          return await response.json();
+        } catch (error) {
+          clearTimeout(timeoutId);
+          throw error;
         }
-        fetchLeetcodeData()
+      };
 
-        //Github
-        async function fetchgitdata() {
-            try {
-                const resp = await fetch('https://api.github.com/users/vikrant48')
-                if (!resp.ok) throw new Error("Network response was not ok");
+      // LeetCode data fetching
+      const fetchLeetcodeData = async () => {
+        try {
+          const data = await fetchWithTimeout(
+            "https://leetcode-api-faisalshofag.vercel.app/vikrantlee"
+          );
 
-                const data = await resp.json()
-                console.log(data)
+          document.getElementById("totalSolved").textContent =
+            data.totalSolved || 0;
+          document.getElementById("totalques").textContent = `Out of ${
+            data.totalQuestions || 0
+          }`;
+          document.getElementById("solved").innerHTML =
+            '<i class="fa-solid fa-check" aria-hidden="true"></i> Solved';
 
-                document.getElementById('avatar').src = data.avatar_url
-                document.getElementById('bio').textContent = data.bio
-                document.getElementById('public_repos').textContent = data.public_repos
-                document.getElementById('followers').textContent = data.followers
-                document.getElementById('created_on').textContent = new Date(data.created_at).toLocaleDateString()
-            } catch (error) {
-                console.error("Failed to fetch GitHub data:", error)
-            }
+          document.getElementById("easySolved").textContent = `${
+            data.easySolved || 0
+          }/${data.totalEasy || 0}`;
+          document.getElementById("mediumSolved").textContent = `${
+            data.mediumSolved || 0
+          }/${data.totalMedium || 0}`;
+          document.getElementById("hardSolved").textContent = `${
+            data.hardSolved || 0
+          }/${data.totalHard || 0}`;
+        } catch (error) {
+          console.error("Failed to fetch LeetCode data:", error);
+          // Set default values on error
+          document.getElementById("totalSolved").textContent = "0";
+          document.getElementById("totalques").textContent = "Out of 0";
         }
-        fetchgitdata()
+      };
 
-        // messege me 
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwBc2AAwFVXUS7FH32qJOvixVkuTxR9vNLxuwi204vhhcM7HR47Qc0FdSbSyt1jcfaAOg/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
+      // GitHub data fetching
+      const fetchGitHubData = async () => {
+        try {
+          const data = await fetchWithTimeout(
+            "https://api.github.com/users/vikrant48"
+          );
 
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault()
-            try {
-                let response = await fetch(scriptURL, {
-                    method: 'POST',
-                    body: new FormData(form)
-                })
-                if (response.ok) {
-                    msg.innerHTML = "Your message was sent successfully"
-                    setTimeout(() => msg.innerHTML = "", 1500)
-                    form.reset()
-                } else {
-                    msg.innerHTML = "Error sending message"
-                    console.error('Error response:', response)
-                }
-            } catch (error) {
-                msg.innerHTML = "Submission failed"
-                console.error('Error!', error.message)
+          const avatar = document.getElementById("avatar");
+          const bio = document.getElementById("bio");
+          const publicRepos = document.getElementById("public_repos");
+          const followers = document.getElementById("followers");
+          const createdOn = document.getElementById("created_on");
+
+          if (avatar) avatar.src = data.avatar_url || "";
+          if (bio) bio.textContent = data.bio || "No bio available";
+          if (publicRepos) publicRepos.textContent = data.public_repos || 0;
+          if (followers) followers.textContent = data.followers || 0;
+          if (createdOn) {
+            createdOn.textContent = data.created_at
+              ? new Date(data.created_at).toLocaleDateString()
+              : "N/A";
+          }
+        } catch (error) {
+          console.error("Failed to fetch GitHub data:", error);
+        }
+      };
+
+      // Contact form handling
+      const initContactForm = () => {
+        const scriptURL =
+          "https://script.google.com/macros/s/AKfycbwBc2AAwFVXUS7FH32qJOvixVkuTxR9vNLxuwi204vhhcM7HR47Qc0FdSbSyt1jcfaAOg/exec";
+        const form = document.forms["submit-to-google-sheet"];
+        const msg = document.getElementById("msg");
+        const submitBtn = document.getElementById("sm");
+
+        if (!form || !msg || !submitBtn) return;
+
+        const showMessage = (message, isError = false) => {
+          msg.innerHTML = message;
+          msg.className = isError ? "error" : "success";
+          setTimeout(() => {
+            msg.innerHTML = "";
+            msg.className = "";
+          }, 3000);
+        };
+
+        const setLoadingState = (loading) => {
+          submitBtn.disabled = loading;
+          submitBtn.innerHTML = loading
+            ? '<i class="fas fa-spinner fa-spin" aria-hidden="true"></i> Sending...'
+            : '<i class="fas fa-paper-plane" aria-hidden="true"></i> Send Message';
+        };
+
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          setLoadingState(true);
+
+          try {
+            const formData = new FormData(form);
+            const response = await fetchWithTimeout(
+              scriptURL,
+              {
+                method: "POST",
+                body: formData,
+              },
+              10000
+            );
+
+            if (response.ok) {
+              showMessage("Your message was sent successfully!");
+              form.reset();
+            } else {
+              showMessage("Error sending message. Please try again.", true);
             }
-        })
+          } catch (error) {
+            console.error("Form submission error:", error);
+            showMessage(
+              "Submission failed. Please check your connection and try again.",
+              true
+            );
+          } finally {
+            setLoadingState(false);
+          }
+        });
+      };
 
+      // Smooth scrolling for navigation links
+      const initSmoothScrolling = () => {
+        const navLinks = document.querySelectorAll('a[href^="#"]');
+
+        navLinks.forEach((link) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute("href");
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+              targetElement.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          });
+        });
+      };
+
+      // Intersection Observer for animations
+      const initScrollAnimations = () => {
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate-in");
+            }
+          });
+        }, observerOptions);
+
+        // Observe elements for animation
+        const animateElements = document.querySelectorAll(
+          ".resume-wrap, .skill-card, .progress-container"
+        );
+        animateElements.forEach((el) => observer.observe(el));
+      };
+
+      // Initialize all functionality when DOM is loaded
+      document.addEventListener("DOMContentLoaded", () => {
+        initImageModal();
+        initMobileNav();
+        initTypingAnimation();
+        initContactForm();
+        initSmoothScrolling();
+        initScrollAnimations();
+
+        // Fetch API data
+        fetchLeetcodeData();
+        fetchGitHubData();
+      });
+
+      // Performance optimization: Lazy load images
+      if ("IntersectionObserver" in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              img.src = img.dataset.src || img.src;
+              img.classList.remove("lazy");
+              observer.unobserve(img);
+            }
+          });
+        });
+
+        document.querySelectorAll("img[data-src]").forEach((img) => {
+          imageObserver.observe(img);
+        });
+      }
+
+      // Service Worker Registration for offline functionality
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/sw.js")
+            .then((registration) => {
+              console.log("SW registered: ", registration);
+            })
+            .catch((registrationError) => {
+              console.log("SW registration failed: ", registrationError);
+            });
+        });
+      }
+
+      // Add keyboard navigation support
+      document.addEventListener("keydown", (e) => {
+        // Escape key closes modals
+        if (e.key === "Escape") {
+          const modal = document.getElementById("imgModal");
+          if (modal && modal.style.display === "block") {
+            modal.style.display = "none";
+            modal.setAttribute("aria-hidden", "true");
+            document.body.style.overflow = "auto";
+          }
+        }
+      });
+
+      // Add focus management for accessibility
+      const focusableElements =
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+      const firstFocusableElement = document.querySelector(focusableElements);
+      const focusableContent = document.querySelectorAll(focusableElements);
+      const lastFocusableElement =
+        focusableContent[focusableContent.length - 1];
+
+      // Trap focus in modal when open
+      const trapFocus = (e) => {
+        if (e.key === "Tab") {
+          if (e.shiftKey) {
+            if (document.activeElement === firstFocusableElement) {
+              lastFocusableElement.focus();
+              e.preventDefault();
+            }
+          } else {
+            if (document.activeElement === lastFocusableElement) {
+              firstFocusableElement.focus();
+              e.preventDefault();
+            }
+          }
+        }
+      };
+
+      // Add focus trap to modal
+      const modal = document.getElementById("imgModal");
+      if (modal) {
+        modal.addEventListener("keydown", trapFocus);
+      }
     </script>
-</body>
-
+  </body>
 </html>
