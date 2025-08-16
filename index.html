@@ -907,10 +907,16 @@
 
       <section id="message_sec" class="message-section">
         <div class="container">
-          <form name="submit-to-google-sheet" class="contact-form">
+          <form
+            action="https://formspree.io/f/xzzvhgfg"
+            method="POST"
+            enctype="multipart/form-data"
+            class="contact-form"
+          >
             <div class="_tital text-center">
               <h2>Send Me a Message</h2>
             </div>
+
             <div class="form-group">
               <label for="name">What's your name?</label>
               <input
@@ -921,6 +927,7 @@
                 required
               />
             </div>
+
             <div class="form-group">
               <label for="email">Your email address?</label>
               <input
@@ -931,6 +938,7 @@
                 required
               />
             </div>
+
             <div class="form-group">
               <label for="mobile">Your mobile number?</label>
               <input
@@ -941,6 +949,7 @@
                 required
               />
             </div>
+
             <div class="form-group">
               <label for="message">How can I help you?</label>
               <textarea
@@ -950,9 +959,25 @@
                 required
               ></textarea>
             </div>
-            <div class="btn_cnt">
-              <button type="submit" class="btn" id="sm">Send Message</button>
+
+            <!-- ✅ File upload field -->
+            <div class="form-group">
+              <label for="upload">Upload a document (optional):</label>
+              <input
+                type="file"
+                id="upload"
+                name="upload"
+                accept=".pdf,.doc,.docx,.jpg,.png"
+              />
             </div>
+
+            <div class="btn_cnt">
+              <button type="submit" class="btn" id="sm">
+                <i class="fas fa-paper-plane" aria-hidden="true"></i> Send
+                Message
+              </button>
+            </div>
+
             <div id="msg"></div>
           </form>
         </div>
@@ -1239,11 +1264,9 @@
         }
       };
 
-      // Contact form handling
+      // // Contact form handling
       const initContactForm = () => {
-        const scriptURL =
-          "https://script.google.com/macros/s/AKfycbwBc2AAwFVXUS7FH32qJOvixVkuTxR9vNLxuwi204vhhcM7HR47Qc0FdSbSyt1jcfaAOg/exec";
-        const form = document.forms["submit-to-google-sheet"];
+        const form = document.querySelector(".contact-form");
         const msg = document.getElementById("msg");
         const submitBtn = document.getElementById("sm");
 
@@ -1267,25 +1290,31 @@
 
         form.addEventListener("submit", async (e) => {
           e.preventDefault();
-
           setLoadingState(true);
 
           try {
             const formData = new FormData(form);
-            const response = await fetchWithTimeout(
-              scriptURL,
-              {
-                method: "POST",
-                body: formData,
+            const response = await fetch(form.action, {
+              method: "POST",
+              body: formData,
+              headers: {
+                Accept: "application/json",
               },
-              10000
-            );
+            });
 
             if (response.ok) {
               showMessage("Your message was sent successfully!");
               form.reset();
             } else {
-              showMessage("Error sending message. Please try again.", true);
+              const data = await response.json();
+              if (data.errors) {
+                showMessage(
+                  data.errors.map((err) => err.message).join(", "),
+                  true
+                );
+              } else {
+                showMessage("Error sending message. Please try again.", true);
+              }
             }
           } catch (error) {
             console.error("Form submission error:", error);
@@ -1298,6 +1327,8 @@
           }
         });
       };
+
+      document.addEventListener("DOMContentLoaded", initContactForm);
 
       // Smooth scrolling for navigation links
       const initSmoothScrolling = () => {

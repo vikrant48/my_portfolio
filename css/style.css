@@ -482,15 +482,15 @@ nav .container {
     font-weight: 700;
     letter-spacing: 1px;
     background: none;
-    -webkit-background-clip: unset;
-    -webkit-text-fill-color: unset;
 }
+
 .skills-container {
     display: flex;
     flex-direction: column;
     gap: 18px;
     flex: 1;
 }
+
 .hover-container {
     position: relative;
     margin-bottom: 10px;
@@ -733,7 +733,12 @@ nav .container {
     background: linear-gradient(135deg, var(--background-dark) 0%, #1a1a2e 100%);
 }
 
-/* Message Section - Card aligned with other cards, full width on mobile */
+/* Message Section - Updated Form Styles */
+#message_sec {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--background-dark) 0%, #1a1a2e 100%);
+}
+
 #message_sec .container {
     display: flex;
     justify-content: center;
@@ -743,7 +748,7 @@ nav .container {
 .contact-form {
     width: 100%;
     max-width: 600px;
-    background: rgba(25, 23, 91, 0.8);
+    background: rgba(25, 23, 91, 0.85);
     backdrop-filter: blur(10px);
     padding: 40px 32px;
     border-radius: var(--border-radius);
@@ -752,6 +757,15 @@ nav .container {
     display: flex;
     flex-direction: column;
     gap: 18px;
+}
+
+._tital h2 {
+    font-size: 2rem;
+    margin-bottom: 18px;
+    color: var(--secondary-color);
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: none;
 }
 
 .form-group {
@@ -773,7 +787,7 @@ nav .container {
     width: 100%;
     border: 2px solid rgba(255, 255, 255, 0.1);
     outline: none;
-    background: rgba(25, 23, 91, 0.8);
+    background: rgba(25, 23, 91, 0.92);
     backdrop-filter: blur(10px);
     padding: 18px 24px;
     color: var(--text-light);
@@ -781,6 +795,13 @@ nav .container {
     border-radius: var(--border-radius);
     transition: var(--transition);
     box-sizing: border-box;
+}
+
+.form-group input[type="file"] {
+    padding: 8px 0;
+    background: transparent;
+    color: var(--text-light);
+    border: none;
 }
 
 .form-group textarea {
@@ -805,6 +826,23 @@ nav .container {
     margin-top: 30px;
 }
 
+#msg {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 1rem;
+    min-height: 24px;
+    font-weight: 600;
+}
+
+#msg.success {
+    color: #4CAF50;
+}
+
+#msg.error {
+    color: #f44336;
+}
+
+/* Responsive */
 @media (max-width: 900px) {
     #message_sec .container {
         justify-content: center;
@@ -813,6 +851,20 @@ nav .container {
         width: 100%;
         min-width: 0;
         padding: 20px 8px;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-form {
+        padding: 12px 4px;
+    }
+    ._tital h2 {
+        font-size: 1.3rem;
+    }
+    .form-group input,
+    .form-group textarea {
+        font-size: 16px;
+        padding: 14px 10px;
     }
 }
 
