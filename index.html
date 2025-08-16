@@ -468,7 +468,11 @@
                   <span class="skill_info">
                     <strong>Tools:</strong> VS Code, Git-GitHub, Power BI, Excel
                   </span>
-                  <div class="skill-card" role="region" aria-label="Tools Skills">
+                  <div
+                    class="skill-card"
+                    role="region"
+                    aria-label="Tools Skills"
+                  >
                     <div
                       class="skill-item"
                       tabindex="0"
@@ -507,7 +511,11 @@
                   <span class="skill_info">
                     <strong>Databases:</strong> SQL, MySQL, MongoDB
                   </span>
-                  <div class="skill-card" role="region" aria-label="Database Skills">
+                  <div
+                    class="skill-card"
+                    role="region"
+                    aria-label="Database Skills"
+                  >
                     <div
                       class="skill-item"
                       tabindex="0"
@@ -924,6 +932,16 @@
               />
             </div>
             <div class="form-group">
+              <label for="mobile">Your mobile number?</label>
+              <input
+                type="tel"
+                id="mobile"
+                name="mobile"
+                placeholder="Enter your mobile number"
+                required
+              />
+            </div>
+            <div class="form-group">
               <label for="message">How can I help you?</label>
               <textarea
                 id="message"
@@ -1158,9 +1176,16 @@
       // LeetCode data fetching
       const fetchLeetcodeData = async () => {
         try {
-          const data = await fetchWithTimeout(
+          const response = await fetch(
             "https://leetcode-api-faisalshofag.vercel.app/vikrantlee"
           );
+
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+
+          const data = await response.json();
+          console.log("Fetched LeetCode data:", data);
 
           document.getElementById("totalSolved").textContent =
             data.totalSolved || 0;
@@ -1181,7 +1206,6 @@
           }/${data.totalHard || 0}`;
         } catch (error) {
           console.error("Failed to fetch LeetCode data:", error);
-          // Set default values on error
           document.getElementById("totalSolved").textContent = "0";
           document.getElementById("totalques").textContent = "Out of 0";
         }

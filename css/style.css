@@ -733,17 +733,16 @@ nav .container {
     background: linear-gradient(135deg, var(--background-dark) 0%, #1a1a2e 100%);
 }
 
+/* Message Section - Card aligned with other cards, full width on mobile */
 #message_sec .container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: flex-start;
 }
 
 .contact-form {
-    width: 60%;
-    min-width: 320px;
+    width: 100%;
     max-width: 600px;
-    margin-left: auto;
     background: rgba(25, 23, 91, 0.8);
     backdrop-filter: blur(10px);
     padding: 40px 32px;
