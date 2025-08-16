@@ -907,7 +907,7 @@
 
       <section id="message_sec" class="message-section">
         <div class="container">
-          <form class="contact-form">
+          <form name="submit-to-google-sheet" class="contact-form">
             <div class="_tital text-center">
               <h2>Send Me a Message</h2>
             </div>
@@ -951,8 +951,9 @@
               ></textarea>
             </div>
             <div class="btn_cnt">
-              <button type="submit" class="btn">Send Message</button>
+              <button type="submit" class="btn" id="sm">Send Message</button>
             </div>
+            <div id="msg"></div>
           </form>
         </div>
       </section>
